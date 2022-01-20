@@ -161,8 +161,5 @@ VOLUME [ "/sys/fs/cgroup" ]
 ADD workspace.service /lib/systemd/system/workspace.service
 RUN sudo systemctl enable workspace
 
-# ISB Coding Club Watermark:
-# RUN echo "cls && printf \"_____ ___________   _____           _ _               _____ _       _     \\n|_   _/  ___| ___ \\ /  __ \\         | (_)             /  __ \\ |     | |    \\n  | | \\ \\\`--.| |_/ / | /  \\/ ___   __| |_ _ __   __ _  | /  \\/ |_   _| |__  \\n  | |  \\\`--. \\ ___ \\ | |    / _ \\ / _\\\` | | '_ \\ / _\\\` | | |   | | | | | '_ \\ \\n _| |_/\\__/ / |_/ / | \\__/\\ (_) | (_| | | | | | (_| | | \\__/\\ | |_| | |_) |\\n \\___/\\____/\\____/   \\____/\\___/ \\__,_|_|_| |_|\\__, |  \\____/_|\\__,_|_.__/ \\n                                                __/ |                      \\n                                               |___/\\n\\n\" && printf \"                      --- Workspace: \$HOSTNAME ---\\n\\n\"" >> /home/workspace/.bashrc
-
 # CMD [ "/lib/systemd/systemd" ]
 CMD [ "/bin/bash", "-c", "/bin/bash /app/server.sh --connection-token no-token --host 0.0.0.0 --port 8080" ]
