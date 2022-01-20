@@ -1,0 +1,17 @@
+{
+  "name": "@openvscode-server/fetcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js",
+    "build": "yarn start && docker build -t workspace-full ."
+  },
+  "dependencies": {
+    "@openvscode-server/fetcher": "../fetcher",
+    "download": "^8.0.0",
+    "node-downloader-helper": "^1.0.19"
+  }
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=OpenVSCode Server Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=workspace
+ExecStart=/bin/bash /app/server.sh --connection-token no-token --host 0.0.0.0 --port 8080
+
+[Install]
+WantedBy=multi-user.target
